@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YOUR NAME — Portfolio</title>
+  <meta name="description" content="Personal portfolio of YOUR NAME — projects, about and contact." />
+
+  <style>
+    :root{
+      --bg:#f7f7fb;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent:#0b78d1;
+      --radius:12px;
+      --max-width:1100px;
+      --gap:1.25rem;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:#111827;
+      line-height:1.5;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding-top:72px;
+    }
+    .container{max-width:var(--max-width);margin:0 auto;padding:1.5rem}
+    header{
+      position:fixed;left:0;right:0;top:0;z-index:60;
+      backdrop-filter: blur(6px);
+      background:rgba(255,255,255,0.8);
+      border-bottom:1px solid rgba(15,23,42,0.04);
+      height:72px;display:flex;align-items:center;}
+    .nav{display:flex;align-items:center;justify-content:space-between;width:100%}
+    .brand{font-weight:700;margin-left:1rem}
+    nav ul{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
+    nav a{display:inline-block;padding:.5rem .75rem;border-radius:8px;text-decoration:none;color:inherit}
+    nav a:hover{background:rgba(11,120,209,0.08);color:var(--accent)}
+
+   
+    .hero{padding:3rem 0 2rem}
+    .hero-grid{display:grid;grid-template-columns:1fr;gap:var(--gap);align-items:center}
+    .hero h1{margin:0 0 .5rem;font-size:clamp(1.75rem,3vw,2.5rem)}
+    .hero p{margin:0;color:var(--muted)}
+
+
+    .about{display:grid;grid-template-columns:1fr;gap:var(--gap);align-items:center;margin-top:1.5rem}
+    .about .profile{width:220px;border-radius:12px;overflow:hidden}
+    .about .profile img{width:100%;height:100%;object-fit:cover;display:block}
+    .two-col{display:grid;grid-template-columns:1fr;gap:1rem}
+
+   
+    .projects{margin-top:2rem}
+    .project-grid{display:grid;grid-template-columns:repeat(1,1fr);gap:1rem}
+    .card{background:var(--card);padding:1rem;border-radius:var(--radius);box-shadow:0 6px 18px rgba(11,23,52,0.04)}
+    .card h3{margin:.25rem 0}
+    .card p{margin:.25rem 0;color:var(--muted);font-size:0.95rem}
+    .meta{font-size:.85rem;color:var(--muted);margin-top:.5rem}
+    .links{margin-top:.5rem;display:flex;gap:.5rem}
+    .btn{display:inline-block;padding:.45rem .7rem;border-radius:8px;text-decoration:none;border:1px solid rgba(11,120,209,0.12)}
+
+  
+    .contact{margin-top:2rem}
+    .contact .email{font-weight:600}
+
+    footer{margin-top:2rem;padding:2rem 0;color:var(--muted);text-align:center}
+
+    
+    @media(min-width:720px){
+      .hero-grid{grid-template-columns:1fr 320px}
+      .about{grid-template-columns:320px 1fr}
+      .project-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(min-width:1000px){
+      .project-grid{grid-template-columns:repeat(3,1fr)}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">I'm Katleen Joy Pineda Colot</div>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="home" class="hero">
+      <div class="hero-grid">
+        <div>
+          <h1>Hi — I'm KATLEEN</h1>
+          <p>Aspiring web developer passionate about creating clean, user-friendly, and responsive websites using only native HTML.</p>
+          <p style="margin-top:1rem"><a class="btn" href="#projects">See my projects</a></p>
+        </div>
+        <div style="text-align:right;align-self:center">
+          
+          <div class="card" style="display:inline-block;text-align:left;min-width:200px">
+            <strong>Current course</strong>
+            <div class="meta">IS ELEC 103 — Fundamentals of Web Development</div>
+            <div style="margin-top:.5rem">Repo name: <code>Final_Project_Colot</code></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="about" class="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About</h2>
+      <div class="two-col">
+        <div class="profile card" style="max-width:220px">
+          <img src="katleen.png"/>
+        </div>
+        <div>
+          <p><strong>Short bio</strong></p>
+          <p>I am a web development student currently enrolled in IS ELEC 103 – Fundamentals of Web Development. I enjoy building simple, responsive, and accessible websites using native HTML and CSS. My interests include learning new coding techniques, improving web design skills, and exploring user-friendly layouts. My career goal is to become a skilled front-end developer and contribute to creating meaningful digital experiences. </p>
+          <p><strong>Skills</strong></p>
+          <ul>
+            <li>HTML — semantic markup, forms, accessibility</li>
+            <li>CSS — responsive layout, flexbox, grid</li>
+            <li>Git &amp; GitHub — version control and hosting</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+      <div class="project-grid">
+    
+        <article class="card">
+          <h3>Project One — Personal Portfolio</h3>
+          <p>A static portfolio built with native HTML and CSS. Contains Home, About, Projects and Contact sections.</p>
+          <div class="meta">Technologies: HTML, CSS</div>
+          <div class="links">
+            <a class="btn" href="#" target="_blank" rel="noopener">View live</a>
+            <a class="btn" href="#" target="_blank" rel="noopener">Source</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Project Two — Sample Website</h3>
+          <p>Example multi-page site using only native HTML pages and internal navigation.</p>
+          <div class="meta">Technologies: HTML</div>
+          <div class="links">
+            <a class="btn" href="#" target="_blank" rel="noopener">View live</a>
+            <a class="btn" href="#" target="_blank" rel="noopener">Source</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Project Three — Mini App</h3>
+          <p>Static mockup or project exported from course exercises.0lo</p>
+          <div class="meta">Technologies: HTML, CSS</div>
+          <div class="links">
+            <a class="btn" href="#" target="_blank" rel="noopener">View live</a>
+            <a class="btn" href="#" target="_blank" rel="noopener">Source</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+   
+    <section id="contact" class="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <p class="email">Email: <a href="mailto:you@example.com">katleenjoypcolot@asscat.edu.ph</a></p>
+
+      <form class="card" onsubmit="alert('This is a static demo form. Replace with a mailto link or use a form service.'); return false;">
+        <label style="display:block;margin-bottom:.25rem">Your name<br><input required type="text" name="name" style="width:100%;padding:.5rem;margin-top:.25rem;border-radius:8px;border:1px solid #e6e6e9"/></label>
+        <label style="display:block;margin-bottom:.25rem">Message<br><textarea required name="message" rows="4" style="width:100%;padding:.5rem;margin-top:.25rem;border-radius:8px;border:1px solid #e6e6e9"></textarea></label>
+        <button type="submit" class="btn">Send</button>
+      </form>
+
+    </section>
+
+    <footer>
+      <div>Final_Project_Colot </div>
+    </footer>
+  </main>
+</body>
+</html>
